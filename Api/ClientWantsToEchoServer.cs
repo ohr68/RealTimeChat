@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using System.Text.Json.Serialization;
 using Fleck;
 using WebSocketBoilerplate;
 
@@ -6,6 +7,7 @@ namespace Api;
 
 public class ClientWantsToEchoServerDto : BaseDto
 {
+    [JsonPropertyName("messageContent")]
     public string MessageContent { get; set; }
 }
 
@@ -18,7 +20,7 @@ public class ClientWantsToEchoServer : BaseEventHandler<ClientWantsToEchoServerD
             EchoValue = "echo: " + dto.MessageContent
         };
 
-        var messageToClient = JsonSerializer.Serialize(echo, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+        var messageToClient = JsonSerializer.Serialize(echo);
         
         socket.Send(messageToClient);
         
@@ -26,7 +28,7 @@ public class ClientWantsToEchoServer : BaseEventHandler<ClientWantsToEchoServerD
     }
 }
 
-public class ServerEchosClient
+public class ServerEchosClient : BaseDto
 {
     public string EchoValue { get; set; }
 }

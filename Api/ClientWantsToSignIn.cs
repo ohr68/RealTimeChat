@@ -1,4 +1,5 @@
-﻿using Api.Services;
+﻿using System.Text.Json.Serialization;
+using Api.Services;
 using Fleck;
 using WebSocketBoilerplate;
 
@@ -6,6 +7,7 @@ namespace Api;
 
 public class ClientWantsToSignInDto : BaseDto
 {
+    [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
 

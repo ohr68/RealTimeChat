@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using System.Text.Json.Serialization;
 using Api.Services;
 using Fleck;
 using WebSocketBoilerplate;
@@ -7,7 +8,10 @@ namespace Api;
 
 public class ClientWantsToBroadcastToRoomDto : BaseDto
 {
+    [JsonPropertyName("message")]
     public string? Message { get; set; }
+    
+    [JsonPropertyName("roomId")]
     public int RoomId { get; set; }
 }
 
@@ -22,7 +26,7 @@ public class ClientWantsToBroadcastToRoom : BaseEventHandler<ClientWantsToBroadc
         };
 
         StateService.BroadcastToRoom(dto.RoomId,
-            JsonSerializer.Serialize(message, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true }));
+            JsonSerializer.Serialize(message));
         
         return Task.CompletedTask;
     }

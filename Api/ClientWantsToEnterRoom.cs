@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using System.Text.Json.Serialization;
 using Api.Services;
 using Fleck;
 using WebSocketBoilerplate;
@@ -7,6 +8,7 @@ namespace Api;
 
 public class ClientWantsToEnterRoomDto : BaseDto
 {
+    [JsonPropertyName("roomId")]
     public int RoomId { get; set; }
 }
 
