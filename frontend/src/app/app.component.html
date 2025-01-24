@@ -1,4 +1,14 @@
+<input [formControl]="userName">
+
+<button (click)="signIn()">SignIn</button>
+
+<input [formControl]="roomId">
+<button (click)="enterRoom()">Enter room</button>
+
 <input [formControl]="messageContent">
+<button (click)="sendEcho()">Echo</button>
+
+<input [formControl]="message">
 <button (click)="sendMessage()">Send</button>
 
-{{ messages }}
+{{ JSON.stringify(messages) }}

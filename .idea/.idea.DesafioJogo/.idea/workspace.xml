@@ -9,10 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="818d139f-c373-49fc-a4c9-49f3ac67c9ac" name="Changes" comment="RealTime chats backend">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DesafioJogo/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DesafioJogo/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/baseDto.ts" afterDir="false" />
+    <list default="true" id="818d139f-c373-49fc-a4c9-49f3ac67c9ac" name="Changes" comment="frontend integration">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DesafioJogo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DesafioJogo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Api/ClientWantsToBroadcastToRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/ClientWantsToBroadcastToRoom.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Api/ClientWantsToEchoServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/ClientWantsToEchoServer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Api/ClientWantsToEnterRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/ClientWantsToEnterRoom.cs" afterDir="false" />
@@ -22,12 +20,16 @@
       <change beforePath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Api.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Api.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/ref/Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/ref/Api.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/refint/Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/refint/Api.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/baseDto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/baseDto.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +48,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/Otavio/RiderProjects/DesafioJogo/Api/obj/Debug/net8.0/Api.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -67,6 +72,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Otavio\\RiderProjects\\DesafioJogo\\frontend\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -126,7 +132,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737641563615</updated>
-      <workItem from="1737641564833" duration="11192000" />
+      <workItem from="1737641564833" duration="15452000" />
     </task>
     <task id="LOCAL-00001" summary="RealTime chats backend">
       <option name="closed" value="true" />
@@ -136,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737658802391</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="frontend integration">
+      <option name="closed" value="true" />
+      <created>1737663002266</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1737663002266</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,51 +172,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="RealTime chats backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="RealTime chats backend" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Api/ClientWantsToBroadcastToRoom.cs</url>
-          <line>21</line>
-          <properties documentPath="C:\Users\Otavio\RiderProjects\DesafioJogo\Api\ClientWantsToBroadcastToRoom.cs" containingFunctionPresentation="Method 'Handle'">
-            <startOffsets>
-              <option value="557" />
-            </startOffsets>
-            <endOffsets>
-              <option value="752" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Api/ClientWantsToEchoServer.cs</url>
-          <line>16</line>
-          <properties documentPath="C:\Users\Otavio\RiderProjects\DesafioJogo\Api\ClientWantsToEchoServer.cs" containingFunctionPresentation="Method 'Handle'">
-            <startOffsets>
-              <option value="446" />
-            </startOffsets>
-            <endOffsets>
-              <option value="447" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Api/Program.cs</url>
-          <line>34</line>
-          <properties documentPath="C:\Users\Otavio\RiderProjects\DesafioJogo\Api\Program.cs" containingFunctionPresentation="">
-            <startOffsets>
-              <option value="857" />
-            </startOffsets>
-            <endOffsets>
-              <option value="858" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="frontend integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="frontend integration" />
   </component>
 </project>

@@ -17,12 +17,10 @@ public class ClientWantsToEchoServer : BaseEventHandler<ClientWantsToEchoServerD
     {
         var echo = new ServerEchosClient()
         {
-            EchoValue = "echo: " + dto.MessageContent
+            EchoValue = dto.MessageContent
         };
 
-        var messageToClient = JsonSerializer.Serialize(echo);
-        
-        socket.Send(messageToClient);
+        socket.Send(JsonSerializer.Serialize(echo));
         
         return Task.CompletedTask;
     }
@@ -30,5 +28,6 @@ public class ClientWantsToEchoServer : BaseEventHandler<ClientWantsToEchoServerD
 
 public class ServerEchosClient : BaseDto
 {
-    public string EchoValue { get; set; }
+    [JsonPropertyName("echoValue")]
+    public string? EchoValue { get; set; }
 }

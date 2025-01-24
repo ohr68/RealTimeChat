@@ -34,6 +34,9 @@ public class ClientWantsToBroadcastToRoom : BaseEventHandler<ClientWantsToBroadc
 
 public class ServerBroadcastsMessageWithUsername : BaseDto
 {
+    [JsonPropertyName("message")]
     public string? Message { get; set; }
+    
+    [JsonPropertyName("username")]
     public string? Username { get; set; }
 }

@@ -1,7 +1,13 @@
 import {Component} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import {FormControl, ReactiveFormsModule} from '@angular/forms';
-import {BaseDto, ServerEchosClientDto} from '../baseDto';
+import {
+  BaseDto, ClientWantsToBroadcastToRoomDto,
+  ClientWantsToEnterRoom,
+  ClientWantsToSignIn,
+  ServerAddsClientToRoomDto, ServerBroadcastsMessageWithUsernameDto,
+  ServerEchosClientDto
+} from '../baseDto';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +22,9 @@ export class AppComponent {
 
   ws: WebSocket = new WebSocket("ws://localhost:8181/");
   messageContent: FormControl<string | null> = new FormControl('');
+  userName: FormControl<string | null> = new FormControl('');
+  roomId: FormControl<number | null> = new FormControl(0);
+  message: FormControl<string | null> = new FormControl('');
 
   constructor() {
     this.ws.onmessage = message => {
@@ -30,7 +39,15 @@ export class AppComponent {
     this.messages.push(dto.echoValue!);
   }
 
-  sendMessage() {
+  ServerAddsClientToRoom(dto: ServerAddsClientToRoomDto) {
+    this.messages.push(dto.message!);
+  }
+
+  ServerBroadcastsMessageWithUsername(dto: ServerBroadcastsMessageWithUsernameDto) {
+    this.messages.push(dto.message!);
+  }
+
+  sendEcho() {
     let obj = {
       eventType: "ClientWantsToEchoServer",
       messageContent: this.messageContent.value!
@@ -38,4 +55,24 @@ export class AppComponent {
 
     this.ws.send(JSON.stringify(obj));
   }
+
+  signIn() {
+    let signIn = new ClientWantsToSignIn(this.userName.value!);
+
+    this.ws.send(JSON.stringify(signIn));
+  }
+
+  enterRoom() {
+    let roomId = new ClientWantsToEnterRoom(Number(this.roomId.value!));
+
+    this.ws.send(JSON.stringify(roomId));
+  }
+
+  sendMessage() {
+    let message = new ClientWantsToBroadcastToRoomDto(Number(this.roomId.value!), this.message.value!);
+
+    this.ws.send(JSON.stringify(message));
+  }
+
+  protected readonly JSON = JSON;
 }

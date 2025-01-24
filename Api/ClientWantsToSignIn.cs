@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.Text.Json;
+using System.Text.Json.Serialization;
 using Api.Services;
 using Fleck;
 using WebSocketBoilerplate;
@@ -17,6 +18,13 @@ public class ClientWantsToSignIn : BaseEventHandler<ClientWantsToSignInDto>
     {
         StateService.SignIn(socket, dto);
 
+        var echo = new ServerEchosClient()
+        {
+            EchoValue = $"Welcome {dto.Username}"
+        };
+
+        socket.Send(JsonSerializer.Serialize(echo));
+            
         return Task.CompletedTask;
     }
 }

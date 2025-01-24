@@ -31,5 +31,6 @@ public class ClientWantsToEnterRoom : BaseEventHandler<ClientWantsToEnterRoomDto
 
 public class ServerAddsClientToRoom : BaseDto
 {
-    public string Message { get; set; }
+    [JsonPropertyName("message")]
+    public string? Message { get; set; }
 }

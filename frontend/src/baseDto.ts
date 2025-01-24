@@ -10,3 +10,41 @@
 export class ServerEchosClientDto extends BaseDto<ServerEchosClientDto> {
   echoValue?: string;
 }
+
+export class ServerAddsClientToRoomDto extends BaseDto<ServerAddsClientToRoomDto> {
+  message?: string;
+}
+
+export class ServerBroadcastsMessageWithUsernameDto extends BaseDto<ServerBroadcastsMessageWithUsernameDto> {
+  message?:string;
+  username?:string;
+}
+
+export class ClientWantsToSignIn extends BaseDto<ClientWantsToSignIn> {
+  userName?: string;
+
+  constructor(userName: string) {
+    super();
+    this.userName = userName;
+  }
+}
+
+export class ClientWantsToEnterRoom extends BaseDto<ClientWantsToEnterRoom> {
+  roomId: number;
+
+  constructor(roomId: number) {
+    super();
+    this.roomId = roomId;
+  }
+}
+
+export class ClientWantsToBroadcastToRoomDto extends BaseDto<ClientWantsToBroadcastToRoomDto> {
+  roomId: number;
+  message?: string;
+
+  constructor(roomId: number, message?: string) {
+    super();
+    this.roomId = roomId;
+    this.message = message;
+  }
+}
