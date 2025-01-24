@@ -1,1 +1,19 @@
-﻿
+﻿<div id="${broadcastMessage.id}" class="flex w-full ${this.isReceiving ? 'justify-start' : 'justify-end'} py-6">
+  <div class="chat ${this.isReceiving ? 'chat-start' : 'chat-end'}">
+    <div class="chat-image avatar">
+      <div class="w-10 rounded-full">
+        <img
+          alt="Tailwind CSS chat bubble component"
+          src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+      </div>
+    </div>
+    <div class="chat-header">
+      {{broadcastMessage.username}}
+      <time class="text-xs opacity-50">{{broadcastMessage.time}}</time>
+    </div>
+    <div class="chat-bubble">
+      {{broadcastMessage.message}}
+    </div>
+    <div class="chat-footer opacity-50">{{broadcastMessage.read ? 'Seen' : 'Delivered'}}</div>
+</div>
+</div>

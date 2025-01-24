@@ -1,4 +1,5 @@
-﻿import { Component } from "@angular/core";
+﻿import {Component, Input} from "@angular/core";
+import {ServerBroadcastsMessageWithUsernameDto} from '../baseDto';
 
 @Component({
   selector: "chat-bubble",
@@ -7,5 +8,5 @@
 })
 
 export class ChatBubbleComponent {
-
+    @Input() broadcastMessage!: ServerBroadcastsMessageWithUsernameDto;
 }

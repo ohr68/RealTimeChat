@@ -1,4 +1,5 @@
-﻿using Fleck;
+﻿using System.Text.Json;
+using Fleck;
 
 namespace Api.Services;
 
@@ -24,14 +25,16 @@ public static class StateService
         return Rooms[room].Add(connection.ConnectionInfo.Id);
     }
 
-    public static void BroadcastToRoom(int room, string message)
+    public static void BroadcastToRoom(int room, ServerBroadcastsMessageWithUsername message)
     {
         if (Rooms.TryGetValue(room, out var connectionIds))
         {
             foreach (var connectionId in connectionIds)
             {
                 if (Connections.TryGetValue(connectionId, out var connectionWithMetaData))
-                    connectionWithMetaData.Connection.Send(message);
+                {
+                    connectionWithMetaData.Connection.Send(JsonSerializer.Serialize(message));
+                }
             }
         }
     }
@@ -40,7 +43,7 @@ public static class StateService
     {
         Connections[connection.ConnectionInfo.Id].Username = clientWantsToSignInDto.Username;
     }
-
+    
     public static string GetConnectionUserName(Guid connectionId)
         => Connections[connectionId].Username!;
 }

@@ -1,19 +1,28 @@
-<input [formControl]="userName">
+<div class="hero bg-base-200 min-h-screen" *ngIf="!isAuthenticated">
+  <div class="hero-content flex-col lg:flex-row-reverse">
+    <div class="text-center lg:text-left">
+      <h1 class="text-5xl font-bold">Login now!</h1>
+      <p class="py-6 flex">
+        And start chatting!
+      </p>
+    </div>
+    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+      <form class="card-body">
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Username</span>
+          </label>
+          <input type="email" placeholder="username" class="input input-bordered" [formControl]="userName" />
+        </div>
+        <div class="form-control mt-6">
+          <button type="button" class="btn btn-primary" (click)="signIn()">Sign In</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
-<button (click)="signIn()">SignIn</button>
-
-<input [formControl]="roomId">
-<button (click)="enterRoom()">Enter room</button>
-
-<!--<input [formControl]="messageContent">-->
-<!--<button (click)="sendEcho()">Echo</button>-->
-
-<!--<input [formControl]="message">-->
-<!--<button (click)="sendMessage()">Send</button>-->
-
-<!--{{ JSON.stringify() }}-->
-
-<div class="flex w-full p-4">
-  <chat [connection]="ws!" [roomId]="room!" (messages)="messages!"></chat>
+<div class="flex w-full p-4" *ngIf="isAuthenticated">
+  <chat class="flex w-full" [currentUser]="userName.value!"></chat>
 </div>
 

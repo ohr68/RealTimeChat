@@ -16,8 +16,12 @@ export class ServerAddsClientToRoomDto extends BaseDto<ServerAddsClientToRoomDto
 }
 
 export class ServerBroadcastsMessageWithUsernameDto extends BaseDto<ServerBroadcastsMessageWithUsernameDto> {
-  message?:string;
-  username?:string;
+  id?: string;
+  message?: string;
+  username?: string;
+  roomId?: number;
+  time?: string;
+  read?: boolean;
 }
 
 export class ClientWantsToSignIn extends BaseDto<ClientWantsToSignIn> {
@@ -46,5 +50,16 @@ export class ClientWantsToBroadcastToRoomDto extends BaseDto<ClientWantsToBroadc
     super();
     this.roomId = roomId;
     this.message = message;
+  }
+}
+
+export class ClientSeenMessageDto extends BaseDto<ClientSeenMessageDto> {
+  roomId!: number;
+  messages: ServerBroadcastsMessageWithUsernameDto[];
+
+  constructor(roomId: number, messages: ServerBroadcastsMessageWithUsernameDto[] ) {
+    super();
+    this.roomId = roomId;
+    this.messages = messages;
   }
 }

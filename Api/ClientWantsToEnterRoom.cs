@@ -22,7 +22,8 @@ public class ClientWantsToEnterRoom : BaseEventHandler<ClientWantsToEnterRoomDto
         
             socket.Send(JsonSerializer.Serialize(new ServerAddsClientToRoom()
             {
-                Message = message
+                Message = message,
+                RoomId = dto.RoomId
             }));
 
         return Task.CompletedTask;
@@ -33,4 +34,7 @@ public class ServerAddsClientToRoom : BaseDto
 {
     [JsonPropertyName("message")]
     public string? Message { get; set; }
+    
+    [JsonPropertyName("roomId")]
+    public int RoomId { get; set; }
 }
