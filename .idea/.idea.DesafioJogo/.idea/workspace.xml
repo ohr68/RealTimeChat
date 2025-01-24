@@ -9,27 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="818d139f-c373-49fc-a4c9-49f3ac67c9ac" name="Changes" comment="frontend integration">
+    <list default="true" id="818d139f-c373-49fc-a4c9-49f3ac67c9ac" name="Changes" comment="signIn, enterRoom and sendMessage implemented in frontend">
+      <change afterPath="$PROJECT_DIR$/frontend/src/chat-bubble/chat-bubble.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/chat-bubble/chat-bubble.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/chat/chat.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/chat/chat.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DesafioJogo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DesafioJogo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/ClientWantsToBroadcastToRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/ClientWantsToBroadcastToRoom.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/ClientWantsToEchoServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/ClientWantsToEchoServer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/ClientWantsToEnterRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/ClientWantsToEnterRoom.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/ClientWantsToSignIn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/ClientWantsToSignIn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Api.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Api.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Api.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Api.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Api/bin/Debug/net8.0/Api.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/Api.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/ref/Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/ref/Api.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/obj/Debug/net8.0/refint/Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Api/obj/Debug/net8.0/refint/Api.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/baseDto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/baseDto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +33,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -65,6 +56,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;.NET Launch Settings Profile.Api: IIS Express.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -132,7 +124,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737641563615</updated>
-      <workItem from="1737641564833" duration="15452000" />
+      <workItem from="1737641564833" duration="20675000" />
     </task>
     <task id="LOCAL-00001" summary="RealTime chats backend">
       <option name="closed" value="true" />
@@ -150,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737663002266</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="signIn, enterRoom and sendMessage implemented in frontend">
+      <option name="closed" value="true" />
+      <created>1737682300223</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1737682300223</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +173,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="RealTime chats backend" />
     <MESSAGE value="frontend integration" />
-    <option name="LAST_COMMIT_MESSAGE" value="frontend integration" />
+    <MESSAGE value="signIn, enterRoom and sendMessage implemented in frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="signIn, enterRoom and sendMessage implemented in frontend" />
   </component>
 </project>

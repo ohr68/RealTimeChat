@@ -5,10 +5,15 @@
 <input [formControl]="roomId">
 <button (click)="enterRoom()">Enter room</button>
 
-<input [formControl]="messageContent">
-<button (click)="sendEcho()">Echo</button>
+<!--<input [formControl]="messageContent">-->
+<!--<button (click)="sendEcho()">Echo</button>-->
 
-<input [formControl]="message">
-<button (click)="sendMessage()">Send</button>
+<!--<input [formControl]="message">-->
+<!--<button (click)="sendMessage()">Send</button>-->
 
-{{ JSON.stringify(messages) }}
+<!--{{ JSON.stringify() }}-->
+
+<div class="flex w-full p-4">
+  <chat [connection]="ws!" [roomId]="room!" (messages)="messages!"></chat>
+</div>
+
